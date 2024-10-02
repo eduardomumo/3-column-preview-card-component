@@ -1,0 +1,115 @@
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--Very-light-gray-background-headings-buttons);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+}
+
+.main-container{
+    max-width: 920px;
+    height: 500px;
+    display: flex;
+    color: white;
+}
+
+.cars-containers{
+    padding: 48px;
+}
+
+h2{
+    font-size: 40px;
+    margin-top: 35px;
+    font-family: "Big Shoulders Display", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+p{
+    font-size: 15px;
+    opacity: 0.75;
+    line-height: 25px;
+    margin-top: 25px;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+button{
+    max-width: 146px;
+    width: 100%;
+    height: 48px;
+    background: none;
+    color: white;
+    border: solid 2px;
+    border-radius: 25px;
+    margin-top: 94px;
+    font-family: "Lexend Deca", sans-serif;
+
+}
+
+
+.cars-containers:first-of-type{
+    background: var(--Bright-orange);
+    border-radius: 8px 0 0 8px;
+}
+
+.cars-containers:nth-of-type(2){
+    background: var(--Dark-cyan);
+    border-radius: 0;
+}
+
+.cars-containers:last-of-type{
+    background: var(--Very-dark-cyan);
+    border-radius: 0 8px 8px 0;
+}
+
+@media (width < 736px) {
+
+    body{
+    padding: 24px;    
+    }
+
+    .main-container{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .cars-containers:first-of-type{
+        border-radius: 8px 8px 0 0;
+    }
+
+    .cars-containers:first-of-type button{
+        color: var(--Bright-orange);
+    }
+
+    .cars-containers:last-of-type{
+        border-radius: 0 0 8px 8px;
+    }
+
+    .cars-containers:nth-of-type(2) button{
+        color: var(--Dark-cyan);
+    }
+
+    .cars-containers:last-of-type button{
+        color: var(--Very-dark-cyan);
+    }
+
+    button{
+        margin-top: 36px;
+        background: var(--Very-light-gray-background-headings-buttons);
+    }
+}
